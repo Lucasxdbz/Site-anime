@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Leveling - Página Inicial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Solo Leveling</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="Quem são os monarcas.html">Quem são os monarcas</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        
+        <button id="toggle-tema">🌙 Tema Escuro</button>
+    </header>
+
+    
+    <section class="banner">
+        <img src="https://i0.wp.com/www.englishlightnovels.com/wp-content/uploads/2019/09/solo-leveling1-1.jpg?resize=798%2C300&ssl=1" alt="Banner Solo Leveling">
+        <div class="introducao">
+            <h2>Bem-vindo ao mundo de Solo Leveling!</h2>
+            <p>Solo Leveling é um anime cheio de ação e mistério, onde seguimos a jornada de Sung Jin-Woo, um caçador que começa como o mais fraco e se torna o mais forte ao enfrentar monstros e explorar masmorras perigosas.</p>
+        </div>
+    </section>
+
+    
+    <section class="galeria">
+        <h2>Personagens Principais</h2>
+        <div class="personagens">
+            <div class="card">
+                <a href="detalhes-jinwoo.html">
+                    <img src="https://kanto.legiaodosherois.com.br/w760-h398-cfill/wp-content/uploads/2024/03/legiao_7EM14KOBdSzo.jpg.webp" alt="Sung Jin-Woo">
+                    <h3>Sung Jin-Woo</h3>
+                    <p>O protagonista, o caçador mais poderoso.</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="detalhes-cha-haein.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwbReS-QqSC2nFEdov2JreJBYpb0DMNt-lyw&s" alt="Cha Hae-In">
+                    <h3>Cha Hae-In</h3>
+                    <p>Uma poderosa caçadora e aliada de Jin-Woo.</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="detalhes-gogunhee.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR55MoGb1m0P8rcldvns7yIwQJk0agm3JXTXg&s" alt="Go Gun-Hee">
+                    <h3>Go Gun-Hee</h3>
+                    <p>O líder da Associação de Caçadores.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="episodios">
+        <h2>Episódios Favoritos</h2>
+        <div class="episodios-lista">
+            <div class="card">
+                <a href="https://animesonlinecc.to/episodio/solo-leveling-episodio-11/" target="_blank">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR-dcW6EeICGLIu5O3UuUy-bRasefO7WFcqA&s" alt="Episódio 11">
+                </a>
+                <h3>Episódio 11</h3>
+                <p>A introdução ao mundo dos caçadores.</p>
+            </div>
+            <div class="card">
+                <a href="https://animesonlinecc.to/episodio/solo-leveling-episodio-2/" target="_blank">
+                    <img src="https://gamefera.com/wp-content/uploads/Solo-Leveling-ep2-.webp" alt="Episódio 11">
+                </a>
+                <h3>Episódio 2</h3>
+                <p>O despertar de Sung Jin-Woo.</p>
+            </div>
+            <div class="card">
+                <a href="https://animesonlinecc.to/episodio/solo-leveling-episodio-7/" target="_blank">
+                    <img src="https://a.storyblok.com/f/178900/1920x1080/bddd924fd6/solo-leveling-epi-7-capa.jpg/m/1200x0/filters:quality(95)format(webp)" alt="Episódio 7">
+                </a>
+                <h3>Episódio 7</h3>
+                <p>Uma batalha épica que muda tudo.</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer>
+        <p>© 2024 - Solo Leveling Fã-Site</p>
+    </footer>
+
+    <script>
+        
+        document.addEventListener("DOMContentLoaded", () => {
+            const botaoToggle = document.getElementById("toggle-tema");
+            const temaAtual = localStorage.getItem("tema");
+
+            
+            if (temaAtual === "tema-escuro") {
+                document.body.classList.add("tema-escuro");
+                botaoToggle.textContent = "🌞 Tema Claro";
+            }
+
+            botaoToggle.addEventListener("click", () => {
+                document.body.classList.toggle("tema-escuro");
+                const novoTema = document.body.classList.contains("tema-escuro") ? "tema-escuro" : "tema-claro";
+                localStorage.setItem("tema", novoTema);
+                botaoToggle.textContent = novoTema === "tema-escuro" ? "🌞 Tema Claro" : "🌙 Tema Escuro";
+            });
+        });
+    </script>
+</body>
+</html>
